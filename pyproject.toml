@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "videoviz-status-mongodb"
+version = "0.1.0"
+description = ""
+authors = ["kvnsu <k.v.n.such@gmail.com>"]
+readme = "README.md"
+packages = [{include = "videoviz_status_mongodb"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pika = "^1"
+pymongo = "^4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
