@@ -30,7 +30,7 @@ class Listener:
     def declare(self, channel: BlockingChannel):
         channel.queue_declare(queue=QUEUE_STATUS, durable=True)
         channel.exchange_declare(exchange=EXCHANGE_STATUS, exchange_type='fanout', durable=True)
-        channel.queue_bind(queue=QUEUE_STATUS, exchange=EXCHANGE_STATUS)
+        channel.queue_bind(queue=QUEUE_STATUS, exchange=EXCHANGE_STATUS, routing_key="")
 
     def __init__(self):
         self.credentials = pika.PlainCredentials('guest', 'guest')

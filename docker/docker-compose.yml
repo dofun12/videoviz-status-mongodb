@@ -1,0 +1,11 @@
+version: '3'
+services:
+  videoviz-status-mongodb:
+    build:
+      dockerfile: docker/Dockerfile
+      context: ..
+    environment:
+      MONGODB_HOST: '192.168.15.104'
+      MONGODB_PORT: '27017'
+      MONGODB_PWD: root
+      MONGODB_USER: root
